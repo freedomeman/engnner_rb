@@ -23,6 +23,7 @@ engnner_rb\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
 engnner_rb\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
 engnner_rb\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 engnner_rb\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+engnner_rb\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
 engnner_rb\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 engnner_rb\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 engnner_rb\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
@@ -48,6 +49,7 @@ engnner_rb\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 engnner_rb\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 engnner_rb\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 engnner_rb\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+engnner_rb\main.o: ../Inc/can.h
 engnner_rb\main.o: ../Inc/dma.h
 engnner_rb\main.o: ../Inc/i2c.h
 engnner_rb\main.o: ../Inc/spi.h

@@ -3,6 +3,7 @@
 "engnner_rb\main.o"
 "engnner_rb\gpio.o"
 "engnner_rb\freertos.o"
+"engnner_rb\can.o"
 "engnner_rb\dma.o"
 "engnner_rb\i2c.o"
 "engnner_rb\spi.o"
@@ -10,6 +11,7 @@
 "engnner_rb\usart.o"
 "engnner_rb\stm32f4xx_it.o"
 "engnner_rb\stm32f4xx_hal_msp.o"
+"engnner_rb\stm32f4xx_hal_can.o"
 "engnner_rb\stm32f4xx_hal_rcc.o"
 "engnner_rb\stm32f4xx_hal_rcc_ex.o"
 "engnner_rb\stm32f4xx_hal_flash.o"
@@ -60,6 +62,9 @@
 "engnner_rb\mc.o"
 "engnner_rb\modefine_control.o"
 "engnner_rb\communicate.o"
+"engnner_rb\can_receive.o"
+"engnner_rb\uint_switch_float.o"
+"engnner_rb\bsp_can.o"
 --strict --scatter "engnner_rb\engnner_rb.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

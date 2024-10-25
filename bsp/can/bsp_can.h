@@ -4,6 +4,8 @@
 #include "struct_typedef.h"
 
 
+void can_filter_init(void);
+
 
 #endif
 

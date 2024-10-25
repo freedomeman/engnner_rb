@@ -9,10 +9,14 @@ bsp/ 这是一些stm32硬件外设相关的配置文件存放的地方
 components/这个文件是官方例程中的用于配置c板的imb8266，具体实现不清楚
 hardware/这是用于配置一些c板挂在的外部设备的，比如遥控器，电机等
     remote_control.c这里面是一些遥控器协议的解析，我们通过uart3配合dma把串口读取到的数据缓存在sbus_rx_buf这个数组中，然后通过一些特定的协议把数组中的数据解析成遥控器按键，拨杆，键盘，鼠标，拨轮对应的值
+    DM_config.c这里面主要实现了对DM配置的函数封装，包括使能，失能，存放零点
 user/中主要存放自己编写的上层函数
     application/中存放用户设计的任务
         communicate_task.c负责向外部发送消息
     modefin_control/存放一些自定义控制器的配置
         modefin_control.c中的主要作用是解析自定义控制器的数据，从usart6配合dam把数据缓存到mc_data这个数组中，然后通过一些特定的协议把数组中的数据转换成自定义孔子器发来的关节电机角度
     modele/主要存放用户编写的应用层函数
-        communicate.c这个是存放各种通讯有关的函数
+        communicate.c这个是存放各种通讯有关的函数,负责处理通讯的接收中断
+    procotol/一些被任务函数调用的功能函数
+        can_receive.c主要作用是封装对电机的通讯函数，其中包括对DM4310,GM2006,GM3580,的封装
+    match/此文件来源于达妙开源的例程主要功能是解算DM4310反馈的数据，服务于can_receive.c
