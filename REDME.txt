@@ -1,0 +1,18 @@
+application/ 此文件中存放由官方开源的历程中移植过来的任务函数：
+    INS_task.c是用于获取c板角度的任务
+    led_flow_task.c是用于控制RGB灯的任务，用于用户判断程序卡死   //为完善
+    test_task.c是用于测试的任务具体还没用上
+bsp/ 这是一些stm32硬件外设相关的配置文件存放的地方
+    boards/其中的.c是官方移植过来的，用于服务官方任务函数（application中的文件中的函数）
+    mc/mc.c是自定义控制器的硬件外设配置，具体是配置了用于接收自定义控制器数据的usart6和dam的，服务于modefin_control/这个文件中的函数
+    rc/bsp_rc.c是配置用于接收遥控器数据的uart3和dma的，服务于hardware/中的remote_control.c
+components/这个文件是官方例程中的用于配置c板的imb8266，具体实现不清楚
+hardware/这是用于配置一些c板挂在的外部设备的，比如遥控器，电机等
+    remote_control.c这里面是一些遥控器协议的解析，我们通过uart3配合dma把串口读取到的数据缓存在sbus_rx_buf这个数组中，然后通过一些特定的协议把数组中的数据解析成遥控器按键，拨杆，键盘，鼠标，拨轮对应的值
+user/中主要存放自己编写的上层函数
+    application/中存放用户设计的任务
+        communicate_task.c负责向外部发送消息
+    modefin_control/存放一些自定义控制器的配置
+        modefin_control.c中的主要作用是解析自定义控制器的数据，从usart6配合dam把数据缓存到mc_data这个数组中，然后通过一些特定的协议把数组中的数据转换成自定义孔子器发来的关节电机角度
+    modele/主要存放用户编写的应用层函数
+        communicate.c这个是存放各种通讯有关的函数
