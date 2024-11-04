@@ -11,7 +11,7 @@ void Can_receive_init(void)
 }
 
 /*
-获取抬升和前伸电机的参数
+获取抬升和前伸电机的参数3508
 */
 void get_upthrow_stick_motor_measure(uint8_t num, uint8_t data[8] , Can_receive * can_receive)
 {

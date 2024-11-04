@@ -120,6 +120,7 @@ typedef struct Can_receive
 }Can_receive;
 
 
+void Can_receive_init(void);
 
 void get_upthrow_stick_motor_measure(uint8_t num, uint8_t data[8] , Can_receive * can_receive);
 

@@ -16,13 +16,14 @@ Can_receive can_receive;
 void communicate_init(void)
 {
     modefine_control_init();
+	Can_receive_init();
 
 }
 
 void communicate_run(void)
 {
-
-
+	
+	
     
     
 }
